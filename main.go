@@ -10,8 +10,10 @@ import (
 )
 
 func main() {
+	// Configure -env flag with env_file path support
+	// adjust flag parsing logic based on project
+	// this one is when using `flag` stdlib
 	var envFile string
-	// Configure -env flag with optional env_file path support
 	flag.BoolFunc("env", "Load .env file", func(s string) error {
 		if s == "true" {
 			s = ".env"
@@ -31,6 +33,7 @@ func main() {
 		}
 	}
 
+	// See config loaded
 	config, err := config.Load()
 	if err != nil {
 		log.Fatalf("config: %+v", err)

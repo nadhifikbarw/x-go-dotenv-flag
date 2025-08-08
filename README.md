@@ -6,7 +6,7 @@ More importantly for me it offers development portability whenever I need to mov
 
 This is referential setup to support `.env` loading in Go that doesn't get in the way of production release to ease project bootstrapping chores.
 
-## Checklist
+## Implementation Checklist
 
 - [ ] Provide `.env.example`
 - [ ] Add `.env` to `.gitignore`
