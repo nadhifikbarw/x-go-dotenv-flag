@@ -1,4 +1,4 @@
-# Flag Controlled `.env` Loading
+# `.env` Loading With Flag Control
 
 I like having `.env` support for local development when developing web service. It's simple, and encourages implementation to consider configurability through environment variables.
 
@@ -14,7 +14,7 @@ This is referential setup to support `.env` loading in Go that doesn't get in th
 - [ ] Register `-env` flag in the project flag parsing logic, prefer allowing to override `.env` path with `.env` as default if unspecified
 - [ ] Prefer `.env` loading logic at the beginning `main` function as early as possible after flag parsing.
 - [ ] Modify `.air.toml` or other live-reload config to `-env` flag by default. See [`.air.toml`](/.air.toml) for reference
-- [ ] Ensure `.env` is non-default behavior without the flag
+- [ ] Ensure `.env` loading is non-default behavior without the flag
 
 ```sh
 # Load .env in root repository
