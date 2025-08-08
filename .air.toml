@@ -1,0 +1,27 @@
+
+# Config file for [Air](https://github.com/air-verse/air) in TOML format
+# Directive below disable error using 'Even Better TOML' VSCode extension
+#:schema https://json.schemastore.org/any.json
+
+# Working directory
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# Just plain old shell command. You could use `make` as well.
+cmd = "go build -o ./tmp/x-go-dotenv-flag github.com/nadhifikbarw/x-go-dotenv-flag"
+# Binary file yields from `cmd`.
+bin = "tmp/x-go-dotenv-flag"
+# Add additional arguments when running binary (bin/full_bin). Will run './tmp/main hello world'.
+args_bin = ["-env"]
+# Watch these filename extensions.
+include_ext = ["go", "tpl", "tmpl", "html", "example"]
+# Ignore these filename extensions or directories.
+exclude_dir = ["build", "vendor", "tmp"]
+# This log file, placed in your temp_dir.
+log = "air.log"
+# It's not necessary to trigger build each time file changes if it's too frequent.
+delay = 1000
+
+[log]
+time = true
